@@ -1,9 +1,6 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setCurrentUser } from './redux/user/user.actions';
-import { selectCurrentUser } from './redux/user/user.selector';
-import { createStructuredSelector } from 'reselect';
 
 import './App.css';
 
@@ -15,6 +12,10 @@ import checkoutPage from './pages/checkout/checkout.component';
 import Header from './components/header/header.component';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+
+import { setCurrentUser } from './redux/user/user.actions';
+import { selectCurrentUser } from './redux/user/user.selector';
+import { createStructuredSelector } from 'reselect';
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
